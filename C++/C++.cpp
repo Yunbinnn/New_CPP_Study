@@ -1,84 +1,91 @@
 ﻿#include <iostream>
+#include "Camera.h"
 using namespace std;
 
-#pragma region 복사 생성자
-	// 같은 객체를 복사하여 생성시킬 때
-	// 호출되는 생성자입니다.
-	
-class Item
+#pragma region 상속
+	// 상위 클래스의 속성을 하위 클래스가 
+	// 사용할 수 있도록 설정해주는 기능입니다.
+
+class Vehicle
 {
-private:
-	int price = 0;
-	int* size;
+protected:
+	float speed = 0;
+	static int killCount;
 
 public:
-	Item() 
-	{ 
-		price = 100;
-		size = new int;
-		*size = 999;
+	Vehicle()
+	{
+		speed = 100;
+		cout << "Vehicle 오브젝트 생성" << endl;
 	}
 
-	Item(const Item& _item)
+	void Movement()
 	{
-		price = _item.price;
-		size = new int;
-		*size = 450;
+		cout << "이동" << endl;
 	}
 
-	void Show()
+	static int GetCount()
 	{
-		cout << "price : " << price << endl;
-		cout << "*size : " << *size << endl;
+		return killCount;
 	}
 
-	~Item()
+	~Vehicle()
 	{
-		delete size;
+		cout << "Vehicle 오브젝트 해제" << endl;
+	}
+
+};
+
+int Vehicle::killCount = 0;
+
+class Car : public Vehicle
+{
+private:
+	int carID = 0;
+
+public:
+	Car()
+	{
+		carID = 1;
+		speed = 200;
+		cout << "Car 오브젝트 생성" << endl;
+	}
+
+	~Car()
+	{
+		cout << "Car 오브젝트 해제" << endl;
+		cout << "killCount : " << ++killCount << endl;
 	}
 };
+
+// 클래스의 상속 관계에서 상위 클래스는 하위 클래스의
+// 속성을 사용할 수 없으며, 하위 클래스는 상위 클래스의
+// 메모리를 포함한 상태로 메모리의 크기가 결정됩니다.
 
 #pragma endregion
 
 int main()
 {
-#pragma region 복사 생성자
+#pragma region 상속
 
-	Item item;
-	item.Show();
+	/*Vehicle vehicle;
 
-	Item _item = item;
-	_item.Show();
+	Car car1;
+	Car car2;
+	Car car3;
 
-#pragma endregion
+	cout << "vehicle의 크기 : " << sizeof(vehicle) << endl;
+	cout << "car의 크기 : " << sizeof(car1) << endl;*/
 
-#pragma region 얕은 복사
-	// 객체를 복사할 때 주소 값을 복사하여
-	// 같은 메모리를 가리키는 복사입니다.
-
-	/*int* ptr1 = new int;
-	int* ptr2 = ptr1;
-
-	*ptr2 = 1000;
-
-	cout << "ptr1의 값 : " << ptr1 << endl;
-	cout << "ptr2의 값 : " << ptr2 << endl;
-
-	delete ptr1;*/
-	// delete ptr2; ERROR
-
-	// 얕은 복사는 객체가 메모리에서 해제될 때 생성자의
-	// 실행 순서와 반대로 소멸자가 실행되기 때문에
-	// 복사한 객체가 먼저 해제되므로 원래 있던 객체가
-	// 해제될 때는 이미 해제된 메모리에 접근하게 됩니다.
+	cout << Vehicle::GetCount() << endl;
 
 #pragma endregion
 
-#pragma region 깊은 복사
-	// 객체를 복사할 때, 참조 값이 아닌 인스턴스 자체를
-	// 새로 복사하여 서로 다른 메모리를 생성하는 복사입니다.
-	
+#pragma region 클래스 분할과 구현
 
+	/*Camera camera;
+
+	camera.Information();*/
 
 #pragma endregion
 
