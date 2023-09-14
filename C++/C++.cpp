@@ -1,92 +1,44 @@
 ﻿#include <iostream>
-#include "Camera.h"
+#include "Vulture.h"
 using namespace std;
 
-#pragma region 상속
-	// 상위 클래스의 속성을 하위 클래스가 
-	// 사용할 수 있도록 설정해주는 기능입니다.
+#pragma region 다형성
+	// 여러 개의 서로 다른 객체가 동일한 기능을
+	// 서로 다른 방법으로 처리할 수 있는 작업입니다.
 
-class Vehicle
-{
-protected:
-	float speed = 0;
-	static int killCount;
-
-public:
-	Vehicle()
-	{
-		speed = 100;
-		cout << "Vehicle 오브젝트 생성" << endl;
-	}
-
-	void Movement()
-	{
-		cout << "이동" << endl;
-	}
-
-	static int GetCount()
-	{
-		return killCount;
-	}
-
-	~Vehicle()
-	{
-		cout << "Vehicle 오브젝트 해제" << endl;
-	}
-
-};
-
-int Vehicle::killCount = 0;
-
-class Car : public Vehicle
-{
-private:
-	int carID = 0;
-
-public:
-	Car()
-	{
-		carID = 1;
-		speed = 200;
-		cout << "Car 오브젝트 생성" << endl;
-	}
-
-	~Car()
-	{
-		cout << "Car 오브젝트 해제" << endl;
-		cout << "killCount : " << ++killCount << endl;
-	}
-};
-
-// 클래스의 상속 관계에서 상위 클래스는 하위 클래스의
-// 속성을 사용할 수 없으며, 하위 클래스는 상위 클래스의
-// 메모리를 포함한 상태로 메모리의 크기가 결정됩니다.
+	// 다형성은 컴파일 시점에 함수와 속성이 결정되는
+	// 정적 바인딩을 하지 않고, 실행 시간에 함수와
+	// 속성이 결정될 수 있는 동적 바인딩을 가능하게 합니다.
 
 #pragma endregion
 
 int main()
 {
-#pragma region 상속
+#pragma region 오버라이드
 
-	/*Vehicle vehicle;
+	/*Mechanic mechanic{};
+	mechanic.Move();
 
-	Car car1;
-	Car car2;
-	Car car3;
-
-	cout << "vehicle의 크기 : " << sizeof(vehicle) << endl;
-	cout << "car의 크기 : " << sizeof(car1) << endl;*/
-
-	cout << Vehicle::GetCount() << endl;
+	Vulture vulture;
+	vulture.Move();*/
 
 #pragma endregion
 
-#pragma region 클래스 분할과 구현
+#pragma region 가상 함수
+	// 상속하는 클래스 내에서 같은 형태의 함수로
+	// 재정의 될 수 있는 함수입니다.
 
-	/*Camera camera;
+	Mechanic* mechanic1 = new Vulture;
 
-	camera.Information();*/
+	cout << "Mechanic의 크기 : " << sizeof(Mechanic) << endl;
+	cout << "Vulture의 크기 : " << sizeof(Vulture) << endl;
 
+	mechanic1->Move();
+	mechanic1->Attack();
+
+	// 가상 함수 실행 시간에 상위 클래스에 대한 참조로
+	// 하위 클래스에 재정의된 함수를 호출할 수 있으며,
+	// 접근 지정자는 공개로 설정해야 합니다.
 #pragma endregion
 
 	return 0;
