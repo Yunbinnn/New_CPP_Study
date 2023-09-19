@@ -19,6 +19,12 @@
     <Filter Include="소스 파일\Mechanic">
       <UniqueIdentifier>{5f464d7f-ddae-4450-9e58-567f1e260fbd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Bionic">
+      <UniqueIdentifier>{b1438a1f-e553-41f9-9779-96687ffacd15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Bionic">
+      <UniqueIdentifier>{0dc63d29-da1b-446f-84f2-d329efdc46b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++.cpp">
@@ -39,17 +45,14 @@
     <ClCompile Include="Vulture.cpp">
       <Filter>소스 파일\Mechanic</Filter>
     </ClCompile>
-    <ClCompile Include="Marine.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Firebat.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
     <ClCompile Include="Ghost.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
-    <ClCompile Include="Unit.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Marine.cpp">
+      <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,17 +74,17 @@
     <ClInclude Include="Vulture.h">
       <Filter>헤더 파일\Mechanic</Filter>
     </ClInclude>
-    <ClInclude Include="Unit.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Marine.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Firebat.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
     <ClInclude Include="Ghost.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Marine.h">
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
