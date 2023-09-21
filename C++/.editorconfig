@@ -1,9 +1,6 @@
 # Visual Studio가 C++ 설정을 사용하여 .editorconfig 파일을 생성했습니다.
 root = true
 
-[*]
-charset = utf-8
-
 [*.{c++,cc,cpp,cppm,cxx,h,h++,hh,hpp,hxx,inl,ipp,ixx,tlh,tli}]
 
 # Visual C++ 코드 스타일 설정
@@ -57,7 +54,7 @@ cpp_space_between_empty_square_brackets = false
 cpp_space_group_square_brackets = true
 cpp_space_within_lambda_brackets = false
 cpp_space_between_empty_lambda_brackets = false
-cpp_space_before_comma = false
+cpp_space_before_comma = true
 cpp_space_after_comma = true
 cpp_space_remove_around_member_operators = true
 cpp_space_before_inheritance_colon = true
