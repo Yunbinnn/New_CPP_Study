@@ -25,6 +25,12 @@
     <Filter Include="헤더 파일\Bionic">
       <UniqueIdentifier>{0dc63d29-da1b-446f-84f2-d329efdc46b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Computer">
+      <UniqueIdentifier>{2816172e-5db6-47d2-95e6-373d52003398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Computer">
+      <UniqueIdentifier>{2ad13dd8-ace6-4f9b-93e3-133a10bcb879}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++.cpp">
@@ -55,6 +61,24 @@
       <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
     <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Computer.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Bank.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -90,6 +114,27 @@
       <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
     <ClInclude Include="LinkedList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="Computer.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="using_std.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
