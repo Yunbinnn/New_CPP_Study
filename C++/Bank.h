@@ -1,9 +1,9 @@
 #pragma once
 #include "Player.h"
 
-#pragma region í´ëž˜ìŠ¤ì˜ ì „ë°© ì„ ì–¸
-// ë¶ˆí•„ìš”í•œ í—¤ë” íŒŒì¼ì´ ë³µìž¡í•˜ê²Œ í¬í•¨ë˜ëŠ” ê²ƒì„ ë°©ì§€í•˜ì—¬,
-// ê²°ê³¼ì ìœ¼ë¡œëŠ” ì»´íŒŒì¼ ì†ë„ë¥¼ í–¥ìƒì‹œí‚µë‹ˆë‹¤.
+#pragma region Å¬·¡½ºÀÇ Àü¹æ ¼±¾ð
+// ºÒÇÊ¿äÇÑ Çì´õ ÆÄÀÏÀÌ º¹ÀâÇÏ°Ô Æ÷ÇÔµÇ´Â °ÍÀ» ¹æÁöÇÏ¿©,
+// °á°úÀûÀ¸·Î´Â ÄÄÆÄÀÏ ¼Óµµ¸¦ Çâ»ó½ÃÅµ´Ï´Ù.
 
 // class Player;
 #pragma endregion

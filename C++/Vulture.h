@@ -18,7 +18,6 @@ public:
 
 	void Attack() override;
 
-
 #pragma endregion
 
 	~Vulture();
