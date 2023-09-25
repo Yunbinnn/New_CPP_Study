@@ -2,20 +2,20 @@
 
 Mouse::Mouse()
 {
-	cout << "Create Mouse" << endl;
+	cout << "마우스 생성" << endl;
 }
 
 void Mouse::Input()
 {
-	cout << "Input Mouse" << endl;
+	cout << "마우스 입력" << endl;
 }
 
 void Mouse::OnDrag()
 {
-	cout << "Mouse Drag" << endl;
+	cout << "마우스 드래그" << endl;
 }
 
 Mouse::~Mouse()
 {
-	cout << "Delete Mouse" << endl;
+	cout << "마우스 삭제" << endl;
 }

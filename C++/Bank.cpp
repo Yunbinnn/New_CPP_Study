@@ -18,5 +18,5 @@ void Bank::Wihtdrawal(Player& player, int money)
 
 void Bank::ShowMoney()
 {
-	cout << "Bank Money : " << bankMoney << endl;
+	cout << "은행에 저축된 돈 : " << bankMoney << endl;
 }

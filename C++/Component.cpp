@@ -2,10 +2,10 @@
 
 Component::Component()
 {
-	cout << "Create Component" << endl;
+	cout << "컴포넌트 생성" << endl;
 }
 
 Component::~Component()
 {
-	cout << "Delete Component" << endl;
+	cout << "컴포넌트 삭제" << endl;
 }

@@ -2,7 +2,7 @@
 
 Computer::Computer()
 {
-	cout << "Create Computer" << endl;
+	cout << "컴퓨터 생성" << endl;
 }
 
 void Computer::Use()
@@ -19,5 +19,5 @@ void Computer::Use()
 
 Computer::~Computer()
 {
-	cout << "Delete Computer" << endl;
+	cout << "컴퓨터 삭제" << endl;
 }

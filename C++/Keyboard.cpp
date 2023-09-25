@@ -2,20 +2,20 @@
 
 Keyboard::Keyboard()
 {
-	cout << "?ㅻ낫???앹꽦" << endl;
+	cout << "키보드 생성" << endl;
 }
 
 void Keyboard::Input()
 {
-	cout << "Input Keboard" << endl;
+	cout << "키보드 입력" << endl;
 }
 
 void Keyboard::OnButton()
 {
-	cout << "Keboard Button Down" << endl;
+	cout << "키보드 버튼 눌림" << endl;
 }
 
 Keyboard::~Keyboard()
 {
-	cout << "Delete Keyboard" << endl;
+	cout << "키보드 삭제" << endl;
 }
