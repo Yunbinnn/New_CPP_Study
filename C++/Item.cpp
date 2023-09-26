@@ -6,7 +6,7 @@ Item::Item(int price, const char* name)
 	this->name = name;
 }
 
-bool Item::GetCheck()
+const bool Item::GetCheck() 
 {
 	return check;
 }

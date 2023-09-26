@@ -11,6 +11,6 @@ private:
 public:
 	Item(int price = 0, const char* name = "");
 
-	bool GetCheck();
+	const bool GetCheck();
 	void SetCheck(bool _check);
 };
