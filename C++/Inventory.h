@@ -9,11 +9,12 @@ private:
 	int lineX;
 	int selectedIndex;
 	Item* items;
-	InputKey input;
 
 public:
 	Inventory(int x = 5, int y = 3);
+
 	void Renderer();
 	void AddItem();
-	void SelectNumber();
+	void ShowItem();
+	void SelectNumber(InputKey inputKey);
 };

@@ -37,6 +37,12 @@
     <Filter Include="소스 파일\etc">
       <UniqueIdentifier>{e9dc8822-7d46-4a32-a65a-658d8fef0477}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Inventory">
+      <UniqueIdentifier>{57c01a1a-99f9-4d58-b315-875968e2dfbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Inventory">
+      <UniqueIdentifier>{3e5eabf7-f097-486d-bf5f-b117dbe00d8f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++.cpp">
@@ -87,14 +93,14 @@
     <ClCompile Include="Bank.cpp">
       <Filter>소스 파일\etc</Filter>
     </ClCompile>
+    <ClCompile Include="InputKey.cpp">
+      <Filter>소스 파일\Inventory</Filter>
+    </ClCompile>
     <ClCompile Include="Inventory.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Inventory</Filter>
     </ClCompile>
     <ClCompile Include="Item.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="InputKey.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Inventory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,14 +158,14 @@
     <ClInclude Include="Player.h">
       <Filter>헤더 파일\etc</Filter>
     </ClInclude>
+    <ClInclude Include="InputKey.h">
+      <Filter>헤더 파일\Inventory</Filter>
+    </ClInclude>
     <ClInclude Include="Inventory.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Inventory</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="InputKey.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Inventory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

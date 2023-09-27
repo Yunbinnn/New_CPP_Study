@@ -6,7 +6,19 @@ Item::Item(int price, const char* name)
 	this->name = name;
 }
 
-const bool Item::GetCheck() 
+void Item::SetItem(int price, const char* name)
+{
+	this->price = price;
+	this->name = name;
+}
+
+void Item::Information()
+{
+	cout << "이름 : " << name << endl;
+	cout << "가격 : " << price << endl;
+}
+
+bool Item::GetCheck() 
 {
 	return check;
 }

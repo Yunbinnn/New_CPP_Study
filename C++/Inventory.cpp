@@ -34,6 +34,7 @@ void Inventory::AddItem()
 	{
 		if (!items[i].GetCheck())
 		{
+			items[i].SetItem(100, "포션");
 			items[i].SetCheck(true);
 			break;
 		}
@@ -46,15 +47,28 @@ void Inventory::AddItem()
 	}
 }
 
-void Inventory::SelectNumber()
+void Inventory::ShowItem()
 {
-	if (input.GetX() > 0 && input.GetX() < 8)
-	{
-		lineX = input.GetX();
-	}
+	if (items[selectedIndex].GetCheck())
+		items[selectedIndex].Information();
+	else
+		cout << "아이템이 존재하지 않습니다." << endl;
+}
 
-	if (input.GetY() > 0)
-	{
-		lineX += 5;
-	}
+void Inventory::SelectNumber(InputKey inputKey)
+{
+	// inputKey.GetX() (0) / 2
+
+	// [0] [1]
+	int resultX = inputKey.GetX() / 2;
+
+	// inputKey.GetY() (0) * 5
+	int resultY = inputKey.GetY() * lineX;
+
+	// resultX + resultY
+	// [0 ] [1 ] [2 ] [3 ] [4 ]
+	// [5 ] [6 ] [7 ] [8 ] [9 ]
+	// [10] [11] [12] [13] [14]
+
+	selectedIndex = resultX + resultY;
 }
