@@ -1,112 +1,49 @@
 ﻿#include <iostream>
-#include <vector>
-#include <time.h>
-#include <Windows.h>
-#include <conio.h>
+#include <stack>
+#include <queue>
 using namespace std;
 
-#define UP    72
-#define DOWN  80
-#define LEFT  75
-#define RIGHT 77
-
-char key = 0;
-int randNum = 0;
-int currentRound = 1;
-
-void Input()
-{
-	{
-		if (_kbhit()) // 키보드 입력을 확인하는 함수
-		{
-			key = _getch();
-
-			if (key == -32)
-				key = _getch();
-
-			switch (key)
-			{
-			case UP: 
-				break;
-			case LEFT: 
-				break;
-			case RIGHT: 
-				break;
-			case DOWN: 
-				break;
-			}
-		}
-	}
-}
-
-#pragma region 선형 컨테이너
-	// 데이터를 선형으로 저장하며, 특별한 제약이나
-	// 규칙이 없는 일반적인 컨테이너입니다.
-
+#pragma region 컨테이너 어댑터
+	// 기존 컨테이너의 인터페이스를 제한하여
+	// 만든 기능이 제한되거나 변형된 컨테이너입니다.
 #pragma endregion
 
 int main()
 {
-#pragma region Vector 컨테이너
+#pragma region 컨테이너 어댑터 (Stack)
 
-	//vector<int> vector;
+	/*stack<int> stack;
 
-	//// push_back() : 뒤 쪽에 데이터를 저장하는 함수
-	////   0	  1	   2
-	//// [10]	[20] [30]
-	//vector.push_back(10);
-	//vector.push_back(20);
-	//vector.push_back(30);
+	stack.push(10);
+	stack.push(20);
+	stack.push(30);
+	stack.push(40);
+	stack.push(50);
 
-	//cout << "vector.size : " << vector.size() << endl;
-	//cout << "capacity : " << vector.capacity() << endl;
+	 cout << "Stack의 Top : " << stack.top() << endl;
 
-	//for (int i = 0; i < vector.size(); i++)
-	//{
-	//	cout << vector[i] << endl;
-	//}
-
-	//vector.push_back(40);
-	//vector.push_back(50);
-
-	////   0	  1	   2	3
-	//// [10]	[20] [30] [40]
-	//vector.pop_back();
-
-	//cout << "vector.size : " << vector.size() << endl;
-	//cout << "capacity : " << vector.capacity() << endl;
-
-	//for (int i = 0; i < vector.size(); i++)
-	//{
-	//	cout << vector[i] << endl;
-	//}
+	while (stack.size())
+	{
+		cout << stack.top() << endl;
+		stack.pop();
+	}*/
 
 #pragma endregion
 
-#pragma region 리듬 게임
+#pragma region 컨테이너 어댑터 (Queue)
 	
-	srand(time(NULL));
-	vector<const char*> note;
+	queue<int> queue;
 
-	for (int i = 0; i < currentRound + 4; i++)
+	queue.push(10);
+	queue.push(20);
+	queue.push(30);
+	queue.push(40);
+	queue.push(50);
+
+	while (queue.size())
 	{
-		randNum = rand() % 4;
-
-		switch (randNum)
-		{
-		case 0: note.push_back("↑");
-			break;
-		case 1: note.push_back("↓");
-			break;
-		case 2: note.push_back("←");
-			break;
-		case 3: note.push_back("→");
-		}
-	}
-
-	for (int i = 0; i < note.size(); i++)
-	{
-		cout << note[i] << " ";
+		cout << queue.front() << endl;
+		queue.pop();
 	}
 
 #pragma endregion
