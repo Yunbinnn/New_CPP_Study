@@ -1,42 +1,52 @@
 ﻿#include <iostream>
-#include <list>
+#include <map>
+#include <set>
 using namespace std;
 
 int main()
 {
-#pragma region 문자열
+#pragma region 맵(std::map)
 
-	/*string content = "Content ＠";
+	//map<string, int> mapData;
 
-	cout << "content 변수의 값 : " << content << endl;
-	cout << "content의 length : " << content.length() << endl;
-	cout << "content의 size : " << content.size() << endl;*/
+	//mapData.insert(make_pair("Sword", 5000));
+	//mapData.insert(make_pair("Armor", 2500));
+
+	// mapData.find("Sword")
+	// [("Sword", 5000)] [("Armor", 2500)]
+
+	//map<string, int>::iterator mapIter;
+
+	//for (mapIter = mapData.begin(); mapIter != mapData.end(); mapIter++)
+	//{
+	//	cout << "Key : " << mapIter->first << endl;
+	//	cout << "Value : " << mapIter->second << endl;
+	//}
+	//
+	//if (mapData.find("Sword") != mapData.end())
+	//	cout << "데이터가 존재합니다." << endl;
+	//else
+	//	cout << "Not Key Found" << endl;
 
 #pragma endregion
 
-#pragma region 연관 컨테이너
-	// KEY와 VALUE가 하나의 구성으로 이루어진
-	// 컨테이너 입니다.
-	
-	list<int> dataList;
+#pragma region std::set
 
-	dataList.push_back(10);
-	dataList.push_front(50);
-	dataList.push_front(25);
-	dataList.push_back(33);
+	set<int> setData;
 
-	// 25 50 10 33
-	// dataList.begin() : 첫 번째 주소로 반환
-	// dataList.end() : 마지막에 있는 그 다음 주소를 반환
+	// 중복된 값이 들어갔을 때
+	// 중복된 값을 제거하고 다시 저장합니다.
+	setData.insert(10);
+ // setData.insert(10);	<- 제거
+	setData.insert(20);
+	setData.insert(30);
+	setData.insert(40);
 
-	// (begin)				   (end)
-	//  [25]  [50]  [10]  [33] 
-	list<int>::iterator iter;
+	set<int>::iterator setIter;
 
-	for (iter = dataList.begin(); iter != dataList.end(); iter++)
-	{
-		cout << *iter << endl;
-	}
+	setIter = setData.begin();
+
+	setData.erase(setIter);
 
 #pragma endregion
 
