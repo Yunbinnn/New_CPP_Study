@@ -30,7 +30,7 @@ int main()
 
 #pragma endregion
 
-#pragma region std::set
+#pragma region 셋(std::set)
 
 	set<int> setData;
 
